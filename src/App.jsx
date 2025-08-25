@@ -13,11 +13,11 @@ function App() {
     <>
       <Header />
       <main>
-        <section id="hero"><Hero /></section>
-        <section id="brand"><Brand /></section>
-        <section id="products"><Products /></section>
-        <section id="reviews"><Reviews /></section>
-        <section id="contact"><Cta /></section>
+        <section id="Hero"><Hero /></section>
+        <section id="Brand"><Brand /></section>
+        <section id="Products"><Products /></section>
+        <section id="Reviews"><Reviews /></section>
+        <section id="Cta"><Cta /></section>
       </main>
       <Footer />
     </>

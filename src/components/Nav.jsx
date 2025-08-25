@@ -3,7 +3,7 @@ import useSmoothScroll from '../hooks/useSmoothScroll'
 
 const Nav = () => {
 
-  const navLink = ['Hero', 'Brand', 'Products', 'Reivews', 'Cta']
+  const navLink = ['Hero', 'Brand', 'Products', 'Reviews', 'Cta']
   const scrollTo = useSmoothScroll()
 
   return (
