@@ -1,24 +1,31 @@
 import React from 'react'
 import useSmoothScroll from '../hooks/useSmoothScroll'
+import { headerData } from '../util/header'
 
 const Nav = () => {
 
-  const navLink = ['Hero', 'Brand', 'Products', 'Reviews', 'Cta']
+  const navLink = headerData.menus
+
   const scrollTo = useSmoothScroll()
+
+  const handleClick = (e, item) => {
+    if (item.type === 'section') {
+      e.preventDefault()
+      const id = item.href?.startWith('#') ? item.href.slice(1) : item.id
+      scrollTo(id)
+    }
+  }
 
   return (
     <nav>
       <ul>
-        {navLink.map((nav, i) => (
-          <li key={i}>
+        {navLink.map((item) => (
+          <li key={item.id}>
             <a
-              href={`#${nav}`}
-              onClick={(e) => {
-                e.preventDefault()
-                scrollTo(nav)
-              }}
+              href={`#${item.href}`}
+              onClick={(e) => handleClick(e, item)}
             >
-              {nav}
+              {item.label}
             </a>
           </li>
         ))}
