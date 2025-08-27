@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div>
-      <TopBanner />
+      
       <header>
         <div className="inner">
           <Nav />

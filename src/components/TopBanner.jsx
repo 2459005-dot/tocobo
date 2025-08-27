@@ -5,8 +5,7 @@ import "swiper/css"
 import "../styles/components/topbanner.scss"
 import { Autoplay } from 'swiper/modules'
 
-
-const TopBanner = () => {
+const TopBanner = ({onClick}) => {
 
   const tbData = headerData.topBanner.items
   const closeBtn = headerData.topBanner.closeIcon
@@ -32,6 +31,7 @@ const TopBanner = () => {
       </Swiper>
       <div
         className="closeBtn"
+        onClick={onClick}
         style={{
           backgroundImage: `url(${closeBtn})`
         }}>
