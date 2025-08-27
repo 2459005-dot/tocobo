@@ -11,7 +11,7 @@ const Nav = () => {
   const handleClick = (e, item) => {
     if (item.type === 'section') {
       e.preventDefault()
-      const id = item.href?.startWith('#') ? item.href.slice(1) : item.id
+      const id = item.href?.startsWith('#') ? item.href.slice(1) : item.id
       scrollTo(id)
     }
   }

@@ -22,11 +22,11 @@ function App() {
       <TopBanner onClick={upTopBanner}/>
       <Header />
       <main>
-        <section id="Hero"><Hero /></section>
-        <section id="Brand"><Brand /></section>
-        <section id="Products"><Products /></section>
-        <section id="Reviews"><Reviews /></section>
-        <section id="Cta"><Cta /></section>
+        <section id="Hero" className="Section"><Hero /></section>
+        <section id="Brand" className="Section"><Brand /></section>
+        <section id="Products" className="Section"><Products /></section>
+        <section id="Reviews" className="Section"><Reviews /></section>
+        <section id="Cta" className="Section"><Cta /></section>
       </main>
       <Footer />
     </div>

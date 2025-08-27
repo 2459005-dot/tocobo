@@ -10,37 +10,42 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        nav ul{
+
+        nav ul {
             display: flex;
             gap: 2rem;
-            a{
+
+            a {
                 display: block;
                 font-size: 1.8rem;
                 color: var(--primary);
                 position: relative;
                 padding: 0 .5rem;
 
-                &:after{
+                &:after {
                     display: block;
                     content: "";
-                    width: 100%;
+                    width: 0%;
                     height: .1rem;
                     background-color: var(--primary);
                     left: 0;
                     position: absolute;
                     transition: width .3s ease;
                 }
-                &:hover::after{
+
+                &:hover::after {
                     width: 100%;
                 }
             }
         }
-        h1.tit{
+
+        h1.tit {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
         }
-        .util-lst{
+
+        .util-lst {
             display: flex;
             gap: 1.2rem;
         }
