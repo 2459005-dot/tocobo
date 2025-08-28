@@ -1,11 +1,42 @@
-.inner{
-    .t-wrap{
-        .txt-2{
-            color: var(--secondary);
-        }
-        .tit{
-            color: var(--primary);
+.hello-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 
+    .img-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 24px;
+        }
+    }
+
+    .t-wrap {
+        flex: 1;
+        text-align: center;
+
+        .txt-2 {
+            color: var(--secondary);
+            font-size: 1.9rem;
+        }
+
+        .tit {
+            color: var(--primary);
+            white-space: pre-line;
+            font-size: 6.6rem;
+        }
+
+        .txt-1 {
+            white-space: pre-line;
+            font-size: 2.6rem;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            font-size: 1.4rem;
         }
     }
 }
