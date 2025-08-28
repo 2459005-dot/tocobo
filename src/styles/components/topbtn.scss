@@ -1,6 +1,45 @@
-.top-btn{
+.top-btn {
     position: fixed;
     z-index: 5;
     right: 2rem;
-    bottom: 2rem;
+    bottom: 9rem;
+    height: 50px;
+    width: 50px;
+
+    img {
+        background-color: var(--secondary);
+        padding: 1.8rem 1.5rem;
+        border-radius: 50%;
+    }
+}
+
+.talk-btn {
+    position: fixed;
+    z-index: 5;
+    right: 2rem;
+    bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    background-image: url("/img/icon_talk.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+}
+
+p.talk {
+    position: fixed;
+    right: 3rem;
+    bottom: 1rem;
+    z-index: 5;
+    color: var(--primary);
+    font-style: italic;
 }

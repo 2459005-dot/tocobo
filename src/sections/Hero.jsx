@@ -31,9 +31,9 @@ const Hero = () => {
           >
             <div className="inner">
               <div className="t-wrap">
-                <h2 
-                className='tit'
-                dangerouslySetInnerHTML={{ __html: slide.title }}
+                <h2
+                  className='tit'
+                  dangerouslySetInnerHTML={{ __html: slide.title }}
                 />
                 <p className='txt'>
                   {slide.subtitle}
