@@ -21,9 +21,10 @@
         .txt-2 {
             color: var(--secondary);
             font-size: 1.9rem;
+            font-family: "Source Serif 4", serif;
         }
 
-        .tit {
+        h2.tit {
             color: var(--primary);
             white-space: pre-line;
             font-size: 6.6rem;
@@ -39,4 +40,6 @@
             font-size: 1.4rem;
         }
     }
+
+
 }

@@ -7,7 +7,7 @@ const TopBtn = () => {
     const scrollTo = useSmoothScroll()
 
     return (
-        <div>
+        <div className='fixed-top'>
             <button
                 className='top-btn'
                 onClick={(e) => {
@@ -19,7 +19,7 @@ const TopBtn = () => {
             <a href="#" className='talk-btn'>
                 TCB
             </a>
-            <p className='talk'>1:1 Talk</p>
+            <p>1:1 Talk</p>
         </div>
     )
 }

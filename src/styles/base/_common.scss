@@ -9,6 +9,17 @@
     }
   }
 
+  &.scrolled {
+    header {
+      background: #ffffff;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .fixed-top{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .Section {
     padding: 6rem 0;
 
@@ -50,7 +61,7 @@ a.btn {
   border-radius: 6rem;
   border: .1rem solid transparent;
   transition: all .8s;
-  
+
   &::after {
     position: absolute;
     content: "";
