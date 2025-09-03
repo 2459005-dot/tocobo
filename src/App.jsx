@@ -1,8 +1,5 @@
 import Header from "./components/Header";
 import Hero from "./sections/Hero";
-import Brand from "./sections/Brand";
-import Products from "./sections/Products";
-import Reviews from "./sections/Reviews";
 import Cta from "./sections/Cta";
 import Footer from "./components/Footer";
 import './styles/main.scss'
@@ -11,6 +8,8 @@ import { useState, useEffect } from "react";
 import TopBtn from "./components/TopBtn";
 import Hello from "./sections/Hello";
 import Collection from "./sections/Collection";
+import Instargram from "./sections/Instargram";
+import Skincare from "./sections/Skincare";
 
 function App() {
 
@@ -42,9 +41,8 @@ function App() {
         <section id="Cta" className="Section"><Cta /></section>
         <section id="Hello" className="Section"><Hello /></section>
         <section id="Collection" className="Section"><Collection /></section>
-        <section id="Brand" className="Section"><Brand /></section>
-        <section id="Products" className="Section"><Products /></section>
-        <section id="Reviews" className="Section"><Reviews /></section>
+        <section id="Skincare" className="Section"><Skincare /></section>
+        <section id="Instargram" className="Section"><Instargram /></section>
       </main>
       <Footer />
     </div>

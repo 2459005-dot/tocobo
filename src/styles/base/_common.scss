@@ -14,7 +14,8 @@
       background: #ffffff;
       background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     }
-    .fixed-top{
+
+    .fixed-top {
       opacity: 1;
       transform: translateY(0);
     }
@@ -25,6 +26,11 @@
 
     &#Hero {
       padding: 0;
+    }
+
+    &#Collection {
+      background-color: var(--bg2);
+      padding: 10rem 0;
     }
   }
 
@@ -82,5 +88,15 @@ a.btn {
     &::after {
       background-color: var(--bg);
     }
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(2rem);
   }
 }

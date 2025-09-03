@@ -1,8 +1,4 @@
-section#Collection {
-    background-color: aliceblue;
-}
-
-.collection-inner {
+.inner.collection-inner {
     text-align: center;
 
     .t-wrap {
@@ -51,6 +47,49 @@ section#Collection {
             margin-top: .9rem;
             font-size: 12px;
         }
+
+        .img-wrap {
+            img {
+                height: 110%;
+                width: 110%;
+                animation: up 2s infinite alternate;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: 3rem;
+        position: static;
+        background-color: var(--bg);
+        height: .4rem;
+
+        .swiper-pagination-progressbar-fill {
+            background-color: var(--secondary);
+        }
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 75%;
+        transform: translateY(-50%);
+        display: block;
+        width: 3.5rem;
+        height: 6.7rem;
+    }
+
+    .prev {
+        left: -5rem;
+        background-image: url('/img/review_arrow_prev.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .next {
+        right: -5rem;
+        background-image: url('/img/review_arrow_next.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

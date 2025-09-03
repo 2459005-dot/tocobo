@@ -13,8 +13,8 @@ export const headerData = {
         { id: "Cta", label: "Cta", href: "#Cta", type: "section" },
         { id: "Hello", label: "Hello", href: "#Hello", type: "section" },
         { id: "Collection", label: "Collection", href: "#Collection", type: "section" },
-        { id: "SkicCare", label: "SkicCare", href: "#SkicCare", type: "section" },
-        { id: "Instar", label: "Instar", href: "#Instar", type: "section" },
+        { id: "Skincare", label: "Skincare", href: "#Skincare", type: "section" },
+        { id: "Instargram", label: "Instargram", href: "#Instargram", type: "section" },
     ],
     topBanner: {
         enabled: true,
