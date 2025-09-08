@@ -42,7 +42,7 @@ function App() {
         <section id="Hello" className="Section"><Hello /></section>
         <section id="Collection" className="Section"><Collection /></section>
         <section id="Skincare" className="Section"><Skincare /></section>
-        <section id="Instargram" className="Section"><Instargram /></section>
+        <section id="Instar" className="Section"><Instargram /></section>
       </main>
       <Footer />
     </div>
