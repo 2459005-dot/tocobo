@@ -48,11 +48,14 @@
         z-index: -1;
       }
     }
+
+    &#Instar {
+      background-color: var(--bg2);
+    }
   }
 
   .Section,
-  header,
-  footer {
+  header {
     .inner {
       max-width: 128rem;
       height: 100%;

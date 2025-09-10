@@ -1,29 +1,24 @@
-.inner.instar-inner{
-    display: flex;
-    .t-wrap {
-        h2.tit {
-            color: var(--secondary);
-            margin-bottom: 3rem;
-        }
+.inner.instar-inner {
+    h2.tit {
+        color: var(--secondary);
     }
-    .slider-wrap{
-        position: relative;
-        width: 75rem;
-        height: 53rem;
-        transform: translateX(10rem);
-        .in {
-            position: absolute;
-            width: calc(200% + 3rem);         
-            height: 100%;
-            left: 0;
-            top: 0;
-            .skincare-slider{
+
+    .instar-lst {
+        display: flex;
+        gap: 1rem;
+        margin-top: 4rem;
+
+        >li {
+            width: clamp(13rem, 15vw, 21.3rem);
+            height: clamp(13rem, 15vw, 21.3rem);
+
+            a {
+                display: block;
+                width: 100%;
                 height: 100%;
-                font-size: 0;
-                a{
-                    display: block;
-                    height: 100%;
-                }
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
     }

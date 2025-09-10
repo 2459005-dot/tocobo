@@ -1,48 +1,35 @@
 import React from 'react'
-import skincare from '../util/instar'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import instar from '../util/instar'
+
 import '../styles/sections/instar.scss'
 
 const Instargram = () => {
   return (
-    <div className='inner skincare-inner'>
+    <div className='inner instar-inner'>
       <div className="t-wrap">
-
-        <h2 className="tit" >
-          Vegan Skincare
+        <h2 className="con-tit">
+          Instargram
         </h2>
-        <p className="txt">
-          피부에 건강한 영향력을 전달하고 꼭 필요한 성분만을 담아 <br />
-          놀라운 변화를 선사하는 비건 스킨케어 브랜드 토코보
+        <p className="txt-4">
+          @tocobo_official
         </p>
-        <a href="#" className="btn">
-          MEET TOCOBO
-        </a>
       </div>
-      <div className="slider-wrap">
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
-          className="skincare-slider"
-          loop={true}
-        >
-          {skincare.map((sl) => (
-            <SwiperSlide
-              style={{
-                backgroundImage: `url(${sl.image})`
-              }}
-              key={sl.id}>
-              <a href={sl.link}>
-                {/* {sl.id} */}
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <ul className="instar-lst">
+        {instar.map((i) => (
+
+          <li key={i.id}>
+            <a
+              style={{ backgroundImage: `url(${i.image})` }}
+              alt={i.alt}
+              href={i.link}>
+              {i.alt}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
+
 
 export default Instargram
