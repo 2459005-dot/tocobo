@@ -18,6 +18,7 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
       e.preventDefault()
       const id = item.href?.startsWith('#') ? item.href.slice(1) : item.id
       scrollTo(id)
+      onNavClose?.()
     }
   }
 

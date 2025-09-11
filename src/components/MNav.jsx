@@ -3,17 +3,21 @@ import '../styles/components/mnav.scss'
 import { headerData } from '../util/header'
 import Util from './Util'
 
-const MNav = ({handleClick, onNavClose}) => {
+const MNav = ({ handleClick, onNavClose }) => {
 
     const navLink = headerData.menus
 
     return (
-        <div className='m-nav-wrap'>
+        <div className='m-nav-wrap' onClick={(e) => e.stopPropagation()}>
             <div className="m-top">
                 <Util />
-                <a href="/" 
-                className="m-close-btn" 
-                onClick={onNavClose}
+                <a href="#"
+                    className="m-close-btn"
+                    onClick={(e) => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        onNavClose()
+                    }}
                 >
                     <img src="/img/icon_search_close.png" alt="icon" />
                 </a>
@@ -22,7 +26,7 @@ const MNav = ({handleClick, onNavClose}) => {
                 {navLink.map((nav, i) => (
                     <li key={i}>
                         <a href={nav.href}
-                        onClick={(e)=>handleClick(e, nav)}
+                            onClick={(e) => handleClick(e, nav)}
                         >
                             {nav.label}
                         </a>
@@ -30,9 +34,9 @@ const MNav = ({handleClick, onNavClose}) => {
                 ))}
             </ul>
             <ul className="btm-lst">
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
-                <li><a href="">공지사항</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">공지사항</a></li>
             </ul>
         </div>
     )

@@ -7,12 +7,14 @@ const Nav = ({handleClick, onNavOpen}) => {
 
   return (
     <nav>
-      <button className='mob-nav-btn' 
+      <a 
+      href='#'
+      className='mob-nav-btn' 
       onClick={(e)=>{
         e.preventDefault()
         onNavOpen()}}>
         <img src="/img/icon_ham.svg" alt="메뉴열기" />
-      </button>
+      </a>
       <ul>
         {navLink.map((item) => (
           <li key={item.id}>

@@ -16,12 +16,9 @@ import "aos/dist/aos.css";
 function App() {
 
   const [topBanner, setTopBanner] = useState("")
-
-  const upTopBanner = () => {
-    setTopBanner("up")
-  }
-
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mNavOpen, setMNavOpen] = useState(false)
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,10 +30,12 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   })
 
-  const [mNavOpen, setMNavOpen] = useState(false)
-
   const handleNavOpen = () => setMNavOpen(true)
   const handleNavClose = () => setMNavOpen(false)
+
+  const upTopBanner = () => {
+    setTopBanner("up")
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,7 +73,7 @@ function App() {
         <section id="Hello" className="Section"><Hello /></section>
         <section id="Collection" className="Section"><Collection /></section>
         <section id="Skincare" className="Section"><Skincare /></section>
-        <section id="Instar" className="Section"><Instargram /></section>
+        <section id="Instargram" className="Section"><Instargram /></section>
       </main>
       <Footer />
     </div>
