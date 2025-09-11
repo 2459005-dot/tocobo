@@ -10,6 +10,8 @@ import Hello from "./sections/Hello";
 import Collection from "./sections/Collection";
 import Instargram from "./sections/Instargram";
 import Skincare from "./sections/Skincare";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
 
@@ -31,11 +33,41 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   })
 
+  const [mNavOpen, setMNavOpen] = useState(false)
+
+  const handleNavOpen = () => setMNavOpen(true)
+  const handleNavClose = () => setMNavOpen(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1111) setMNavOpen(false)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = mNavOpen ? 'hidden' : ''
+  }, [mNavOpen])
+
+  useEffect(() => {
+    Aos.init({
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+    });
+  }, [])
+
   return (
     <div className={`app-container ${topBanner} ${isScrolled ? "scrolled" : ""}`}>
       <TopBtn />
       <TopBanner onClick={upTopBanner} />
-      <Header />
+      <Header
+        mNavOpen={mNavOpen}
+        onNavOpen={handleNavOpen}
+        onNavClose={handleNavClose}
+      />
       <main>
         <section id="Hero" className="Section"><Hero /></section>
         <section id="Cta" className="Section"><Cta /></section>
