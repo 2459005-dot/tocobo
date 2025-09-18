@@ -4,14 +4,20 @@
         justify-content: center;
         gap: 2rem;
 
+        @media screen and (max-width:1111px) {
+            flex-wrap: wrap;
+        }
+
         >li {
             text-align: center;
 
             .img-wrap {
+
                 width: 13rem;
                 height: 13rem;
                 background-repeat: no-repeat;
                 background-size: contain;
+                background-repeat: no-repeat;
                 border-radius: 50%;
             }
 
