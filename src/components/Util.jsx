@@ -7,7 +7,7 @@ const Util = () => {
 
   return (
     <ul className='util-lst'>
-      {utilData.map((util)=>(
+      {utilData.map((util) => (
         <li key={util.id}>
           <a href={util.href}></a>
           <img src={util.icon} alt={util.label} />

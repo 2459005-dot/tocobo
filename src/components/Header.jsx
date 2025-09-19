@@ -2,7 +2,6 @@ import React from 'react'
 import Nav from './Nav'
 import Util from './Util'
 import MNav from './MNav'
-import TopBanner from './TopBanner'
 import { headerData } from '../util/header'
 import "../styles/components/header.scss"
 import useSmoothScroll from '../hooks/useSmoothScroll'
@@ -29,8 +28,7 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
         <div className="inner">
           <Nav
             handleClick={handleClick}
-            onNavOpen={onNavOpen}
-          />
+            onNavOpen={onNavOpen} />
           <h1 className='tit'>
             <a href={headerLogo.href}>
               <img src={headerLogo.src} alt={headerLogo.alt} />
@@ -42,8 +40,7 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
       {mNavOpen && (
         <MNav
           handleClick={handleClick}
-          onNavClose={onNavClose}
-        />
+          onNavClose={onNavClose} />
       )}
     </div>
   )

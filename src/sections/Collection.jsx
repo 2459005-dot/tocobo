@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import '../styles/sections/collection.scss'
 import { collectionData } from '../util/collection'
@@ -35,37 +36,33 @@ const Collection = () => {
       </div>
 
       <Swiper
+        className="collection-slider"
         slidesPerView={3}
         spaceBetween={30}
         loop={true}
         pagination={{ type: 'progressbar', }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
-        modules={[Pagination, Navigation]}
-        className="mySwiper">
+        modules={[Pagination, Navigation]}>
 
-        {collectionData.map((cd) => (
-          <SwiperSlide>
-            <div className="info-wrap">
-              <ul>
-                <li key={cd.id}>
-                  <div className="info-tit">{cd.title}</div>
-                  <div className="name">{cd.name}</div>
-                  <div className="k-name">{cd.kname}</div>
-                  <a href="#">
-                    <div className="img-wrap">
-                      <img src={cd.image} alt="" />
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+        {collectionData.map((cd, i) => (
+          <SwiperSlide key={i}>
+            <a href="#">
+              <div className="info-wrap">
+                <div className="info-tit">{cd.title}</div>
+                <div className="name">{cd.name}</div>
+                <div className="k-name">{cd.kname}</div>
+              </div>
+              <div className="img-wrap">
+                <img src={cd.image} alt={cd.name} />
+              </div>
+            </a>
           </SwiperSlide>
         ))}
 
       </Swiper>
       <a href="#" className='prev' ref={prevRef}></a>
       <a href="#" className='next' ref={nextRef}></a>
-    </div>
+    </div >
   )
 }
 

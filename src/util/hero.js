@@ -62,3 +62,6 @@ export const heroSlides = [
         order: 4,
     },
 ];
+
+export const getActiveHeroSlides = () =>
+    heroSlides.filter(s => s.active).sort((a, b) => a.order - b.order);

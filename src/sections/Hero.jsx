@@ -31,21 +31,18 @@ const Hero = () => {
           el: '.swiper-pagination',
           type: 'fraction'
         }}
-        loop={true}
-      // autoplay={true}
-      >
+        loop={true}>
+
         {heroSlides.map((slide) => (
           <SwiperSlide
             key={slide.id}
             className={`hero-slide ${slide.id}`}
-            style={{ backgroundImage: `url(${isMobile ? slide.image.mobile : slide.image.desktop})` }}
-          >
+            style={{ backgroundImage: `url(${isMobile ? slide.image.mobile : slide.image.desktop})` }}>
             <div className="inner">
               <div className="t-wrap">
                 <h2
                   className='tit'
-                  dangerouslySetInnerHTML={{ __html: slide.title }}
-                />
+                  dangerouslySetInnerHTML={{ __html: slide.title }} />
                 <p className='txt'>
                   {slide.subtitle}
                 </p>

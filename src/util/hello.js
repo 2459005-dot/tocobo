@@ -1,10 +1,6 @@
 const img = (path) => `/img/${path}`;
 
 export const helloData = {
-    id: "intro-01",
-    layout: "img/",     // 혹은 "image-right-text-left"
-    bgColor: "#FFFFFF",
-    containerMaxWidth: 1200,             // px
 
     media: {
         type: "image",                     // "image" | "video"

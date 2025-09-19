@@ -1,15 +1,15 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import Cta from "./sections/Cta";
-import Footer from "./components/Footer";
 import './styles/main.scss'
 import TopBanner from "./components/TopBanner";
 import { useState, useEffect } from "react";
 import TopBtn from "./components/TopBtn";
 import Hello from "./sections/Hello";
 import Collection from "./sections/Collection";
-import Instargram from "./sections/Instargram";
 import Skincare from "./sections/Skincare";
+import Instargram from "./sections/Instargram";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -19,6 +19,16 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mNavOpen, setMNavOpen] = useState(false)
 
+  useEffect(() => {
+    Aos.init({
+      duration: 400,
+      easing: 'ease',
+    });
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = mNavOpen ? 'hidden' : ''
+  }, [mNavOpen])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,13 +40,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   })
 
-  const handleNavOpen = () => setMNavOpen(true)
-  const handleNavClose = () => setMNavOpen(false)
-
-  const upTopBanner = () => {
-    setTopBanner("up")
-  }
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1111) setMNavOpen(false)
@@ -47,16 +50,12 @@ function App() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  useEffect(() => {
-    document.body.style.overflow = mNavOpen ? 'hidden' : ''
-  }, [mNavOpen])
+  const handleNavOpen = () => setMNavOpen(true)
+  const handleNavClose = () => setMNavOpen(false)
 
-  useEffect(() => {
-    Aos.init({
-      duration: 400, // values from 0 to 3000, with step 50ms
-      easing: 'ease', // default easing for AOS animations
-    });
-  }, [])
+  const upTopBanner = () => {
+    setTopBanner("up")
+  }
 
   return (
     <div className={`app-container ${topBanner} ${isScrolled ? "scrolled" : ""}`}>

@@ -1,16 +1,13 @@
 const img = (path) => `/img/${path}`;
-
 import { FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { RiKakaoTalkFill } from "react-icons/ri";
 
-// 로고
 export const logoData = {
     src: img("logo.svg"),
     alt: "TOCOBO 로고",
     href: "/",
 };
 
-// 회사 정보
 export const companyData = [
     "주식회사 픽톤  대표 : 이병훈",
     "주소 : 03966 서울특별시 마포구 월드컵북로15길 45 (성산동)",
@@ -31,7 +28,6 @@ export const footerLegal = {
     ]
 };
 
-// 고객센터
 export const customerCenterData = {
     title: "Customer Center",
     tel: { value: "02-6352-2410", href: "tel:0263522410" },
@@ -40,7 +36,6 @@ export const customerCenterData = {
     talk: { label: "1:1 TALK", href: "#" },
 };
 
-// 메뉴
 export const footerMenus = [
     {
         title: "Brand",

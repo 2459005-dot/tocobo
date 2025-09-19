@@ -5,7 +5,7 @@ import "swiper/css"
 import "../styles/components/topbanner.scss"
 import { Autoplay } from 'swiper/modules'
 
-const TopBanner = ({onClick}) => {
+const TopBanner = ({ onClick }) => {
 
   const tbData = headerData.topBanner.items
   const closeBtn = headerData.topBanner.closeIcon
@@ -17,12 +17,10 @@ const TopBanner = ({onClick}) => {
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000 }}
-        modules={[Autoplay]}
-      >
+        modules={[Autoplay]}>
         {tbData.map((item) => (
           <SwiperSlide
-            key={item.id}
-          >
+            key={item.id}>
             <a href={item.href}>
               {item.text}
             </a>
@@ -32,9 +30,7 @@ const TopBanner = ({onClick}) => {
       <div
         className="closeBtn"
         onClick={onClick}
-        style={{
-          backgroundImage: `url(${closeBtn})`
-        }}>
+        style={{ backgroundImage: `url(${closeBtn})` }}>
         close btn
       </div>
     </div>

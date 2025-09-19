@@ -1,6 +1,6 @@
 import React from 'react'
 import { categories } from '../util/cta'
-import '../styles/sections/cta.scss' 
+import '../styles/sections/cta.scss'
 
 const Cta = () => {
 
@@ -12,8 +12,7 @@ const Cta = () => {
         {categories.map((cta, i) => (
           <li key={cta.id}
             data-aos='fade-up'
-            data-aos-delay={stagger(1000, i, 100)}
-          >
+            data-aos-delay={stagger(1000, i, 100)}>
             <a href={cta.href}>
               <div className="img-wrap" style={{ backgroundImage: `url(${cta.img.src})` }}>
               </div>

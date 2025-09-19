@@ -1,6 +1,7 @@
 const img = (path) => `/img/${path}`
 
 export const headerData = {
+
     logo: {
         src: img("logo.svg"),
         alt: "TOCOBO",
@@ -8,6 +9,7 @@ export const headerData = {
         width: 120,
         height: 28,
     },
+
     menus: [
         { id: "Hero", label: "Hero", href: "#Hero", type: "section" },
         { id: "Cta", label: "Cta", href: "#Cta", type: "section" },
@@ -16,9 +18,10 @@ export const headerData = {
         { id: "Skincare", label: "Skincare", href: "#Skincare", type: "section" },
         { id: "Instargram", label: "Instargram", href: "#Instargram", type: "section" },
     ],
+
     topBanner: {
         enabled: true,
-        height: 64,                   // px
+        height: 64,
         items: [
             { id: "tb-1", text: "새로운 소식이 있습니다.", href: "#" },
             { id: "tb-2", text: "업데이트 안내", href: "#" },
@@ -28,6 +31,7 @@ export const headerData = {
         background: "#DC272D",
         color: "#fff",
     },
+
     utils: [
         { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#" },
         { id: "account", label: "마이", icon: img("icon_myp.svg"), href: "#" },

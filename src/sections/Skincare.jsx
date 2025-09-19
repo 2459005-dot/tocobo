@@ -22,24 +22,25 @@ const Skincare = () => {
         </a>
       </div>
       <div className="slider-wrap">
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={30}
-          className="skincare-slider"
-          loop={true}
-        >
-          {skincare.map((sl) => (
-            <SwiperSlide
-              style={{
-                backgroundImage: `url(${sl.image})`
-              }}
-              key={sl.id}>
-              <a href={sl.link}>
-                {/* {sl.id} */}
-              </a>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="in">
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            className="skincare-slider"
+            loop={true}>
+            {skincare.map((sl) => (
+              <SwiperSlide
+                style={{
+                  backgroundImage: `url(${sl.image})`
+                }}
+                key={sl.id}>
+                <a href={sl.link}>
+                  {sl.id}
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   )
